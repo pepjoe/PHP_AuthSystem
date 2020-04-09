@@ -1,14 +1,16 @@
 # PHP Task 2 - PHP Intro - Building Authentication System
 
-ADMIN LOGIN DETAILS
+![StartNG](https://res.cloudinary.com/ppjoe/image/upload/v1586473800/Screeshot_2020-04-10-00-07-28_dfv4te.png)
 
-Email : admin@bodilyacademy.com
+## ADMIN LOGIN DETAILS
+
+Email : admin@bodilyacadmy.com
 
 password : hng2020
 
-*******************************************
+******************************************
 
-SAMPLE USER DETAILS
+## SAMPLE USER DETAILS
 
 Email : vick@bodilyacademy.com
 
@@ -16,8 +18,16 @@ password : hng2020
 
 *********************************************
 
-Copy or clone the entire project folder into the root directory of your local server
+## Steps to test it:
 
-Start your local server
+*Copy or clone the entire project folder into the root directory of your local server
 
-Open browser and navigate to http://localhost/PHP_TASK_2_TODO/index.php
+*Start your local server
+
+*Open the browser and navigate to http://localhost/PHP_TASK_2_TODO/index.php
+
+*Use the login details above to login, otherwise, register as a new user in order to access the dashboard.
+
+## Online Testing
+
+Test it online using this link: https://auth-php2.herokuapp.com
