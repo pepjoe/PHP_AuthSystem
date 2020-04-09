@@ -1,6 +1,6 @@
 # PHP Task 2 - PHP Intro - Building Authentication System
 
-![StartNG](https://res.cloudinary.com/ppjoe/image/upload/v1586473800/Screeshot_2020-04-10-00-07-28_dfv4te.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1586473800/Screeshot_2020-04-10-00-07-28_dfv4te.png)
 
 ## ADMIN LOGIN DETAILS
 
