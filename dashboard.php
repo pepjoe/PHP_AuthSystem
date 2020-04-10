@@ -22,7 +22,6 @@ if(!isset($_SESSION['loggedIn'])){
 			<p > Date of registration:  <strong> <?php echo $_SESSION['date'] ?></strong></p>
 			<hr/>
 			<p > Date and time of last login:  <strong> <?php echo $_SESSION['logindate'] ?></strong></p>
-
 			<hr/>
 			<p > Department:  <strong> <?php echo $_SESSION['department'] ?></strong></p>
 			
