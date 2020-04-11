@@ -64,6 +64,7 @@ if($errorCount > 0){
         
             if($passwordFromFileS == $passwordFromUser){
                 //redicrect to dashboard
+                date_default_timezone_set('Africa/Lagos');
                 $_SESSION['logindate'] = $userObject->logindate;
                 $_SESSION['date'] = $userObject->date;
                 $_SESSION['loggedIn'] = $userObject->id; 
