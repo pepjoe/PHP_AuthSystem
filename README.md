@@ -3,6 +3,7 @@
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587675955/Screenshot_72_hekvoh.png)
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676147/Screenshot_73_sdw9n3.png)
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676476/Screenshot_75_pkplko.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587678391/Screenshot_2020-04-23-22-40-42_i0bogq.png)
 
 ## ADMIN LOGIN DETAILS
 
@@ -12,7 +13,15 @@ password : hng2020
 
 ******************************************
 
-## SAMPLE USER DETAILS
+## SAMPLE USER DETAILS (Coaching Team)
+
+Email : coach1@bodilyacademy.com
+
+password : hng2020
+
+******************************************
+
+## SAMPLE USER DETAILS (Player)
 
 Email : vick@bodilyacademy.com
 
