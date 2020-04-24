@@ -1,6 +1,8 @@
-# PHP Task 2 - PHP Intro - Building Authentication System
+# PHP Task 3 - Authentication System Refactor
 
-![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1586473800/Screenshot_2020-04-10-00-07-28_dfv4te.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587675955/Screenshot_72_hekvoh.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676147/Screenshot_73_sdw9n3.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676476/Screenshot_75_pkplko.png)
 
 ## ADMIN LOGIN DETAILS
 
@@ -30,4 +32,4 @@ password : hng2020
 
 ## Online Testing
 
-Test it online using this link: https://auth-php2.herokuapp.com
+Test it online using this link: https://auth-php3.herokuapp.com
