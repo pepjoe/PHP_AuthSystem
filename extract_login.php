@@ -75,7 +75,7 @@ if($errorCount > 0){
                 $_SESSION['logintime'] = date("y/m/d h:i:s A");
                 $_SESSION['userObject'] = json_encode($userObject);
                 
-                if ($_SESSION['role'] == "Medical Team") {
+                if ($_SESSION['role'] == "Coaching Team") {
                     redirect_to("coachingT_dashboard.php");
                 }
                 else{
