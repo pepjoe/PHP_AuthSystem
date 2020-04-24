@@ -1,9 +1,14 @@
 <?php include_once('lib/header.php');
       require_once('functions/alert.php');
+      require_once('functions/redirect.php');
 
 if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
     // redirect to dashboard
-    header("Location: dashboard.php");
+    if ($_SESSION['role'] == "Coaching Team") {
+        redirect_to('coachingT_dashboard.php');
+    }else{
+        redirect_to('player_dashboard.php');
+    }
 }
 
 ?>
@@ -28,21 +33,25 @@ if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
                     }                
                 ?>
 
-                type="text" class="form-control" name="email" placeholder="Email"  />
+                type="text" class="form-control" name="email" placeholder="Email"/>
             </p>
 
             <p>
                 <label>Password</label><br />
-                <input class="form-control" type="password" name="password" placeholder="Password"  />
+                <input class="form-control" type="password" name="password" placeholder="Password"/>
             </p>       
         
         
             <p>
                 <button class="btn btn-sm btn-primary" type="submit">Login</button>
             </p>
+
             <p>
-                
-                <a href="register.php">Don't have an account? Register</a>
+                <a href="forgotPwd.php">Forgot password</a>
+            </p>
+
+            <p>
+                Don't have an account?<a href="register.php"> Register</a>
             </p>
         </form>
     </div>

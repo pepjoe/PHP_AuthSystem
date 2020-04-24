@@ -118,14 +118,49 @@ require_once('functions/alert.php');
             </p>
             <p>
                 <label class="label" for="track">Department</label><br />
-                <input
-                <?php              
-                    if(isset($_SESSION['department'])){
-                        echo "value=" . $_SESSION['department'];                                                             
-                    }                
-                ?>
-                type="text" id="department" class="form-control" name="department" placeholder="Department"/>
-            
+                <select class="form-control" name="department">
+                
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Club Service'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Club Service</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Techniques and Coaching'){
+                        echo "selected";                                                           
+                    }
+                    ?>
+                    >Techniques and Coaching</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Sales'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Sales</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Administration'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Administration</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Finance'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Finance</option>
+                    
+                </select>
             </p>
             <p>
                 <button class="btn btn-sm btn-success" type="submit">Register</button>

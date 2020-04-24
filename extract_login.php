@@ -72,8 +72,15 @@ if($errorCount > 0){
                 $_SESSION['fullname'] = $userObject->first_name . " " . $userObject->last_name;
                 $_SESSION['role'] = $userObject->designation;
                 $_SESSION['department'] = $userObject->department;
+                $_SESSION['logintime'] = date("y/m/d h:i:s A");
+                $_SESSION['userObject'] = json_encode($userObject);
                 
-                redirect_to("dashboard.php");
+                if ($_SESSION['role'] == "Medical Team") {
+                    redirect_to("coachingT_dashboard.php");
+                }
+                else{
+                    redirect_to("player_dashboard.php");
+                }
                 die();
             }
           

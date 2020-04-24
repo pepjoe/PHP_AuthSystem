@@ -9,14 +9,33 @@ function test_input($data) {
 }
 
 
-function is_user_loggedIn(){
+function is_user_loggedIn() {
 
-    if($_SESSION['loggedIn'] && !empty($_SESSION['loggedIn'])) {
+    if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])) {
         return true;
     }
 
     return false;
 }
+
+function is_token_set(){
+
+    return is_token_set_in_get() || is_token_set_in_session();
+
+}
+
+function is_token_set_in_session(){
+
+    return  isset($_SESSION['token']);
+
+}
+
+function is_token_set_in_get(){
+
+    return isset($_GET['token']); 
+
+}
+
 
 
 function find_user($email = ""){
@@ -49,4 +68,8 @@ function find_user($email = ""){
 
 function save_user($userObject){
     file_put_contents("file_system/users/". $userObject['email'] . ".json", json_encode($userObject));
+}
+
+function save_appointment($appointment){
+    file_put_contents("file_system/appointments/". $appointment['email'] . ".json", json_encode($appointment));
 }

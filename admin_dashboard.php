@@ -16,6 +16,14 @@ if(!isset($_SESSION['loggedIn'])){
         <p>
             <a class="btn btn-bg btn-outline-primary" href="add_user.php">Add Users</a>            
         </p>
+
+        <p>
+            <a class="btn btn-bg btn-outline-primary" href="view_player.php">View Players</a>            
+        </p>
+        <p>
+            <a class="btn btn-bg btn-outline-primary" href="view_staff.php">View Staff</a>            
+        </p>
+        
     </div>
 
     

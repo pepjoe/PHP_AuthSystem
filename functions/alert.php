@@ -18,6 +18,29 @@ function print_alert(){
 
 }
 
+function print_message(){
+    $types = ['message', 'info', 'error'];
+    $colors = ['success', 'info', 'danger'];
+
+    for ($i = 0; $i < count($colors); $i++) {
+        
+        if (isset($_SESSION[$types[$i]]) && $_SESSION[$types[$i]] != '') {
+            echo "<div class='alert alert-" . $colors[$i] . "'" . " role='alert' id='alert'>" . $_SESSION[$types[$i]] .
+            "</div>";
+            
+            if (!isset($_SESSION['LoggedIn'])) {
+                session_destroy();
+            }
+            else {
+                unset($_SESSION[$types[$i]]);
+            }
+                
+        }
+            
+    }   
+
+}
+
 function set_alert($type = "message", $content = ""){
     switch($type){
         case "message":
@@ -32,5 +55,18 @@ function set_alert($type = "message", $content = ""){
         default:
         $_SESSION['message'] = $content;
     break;
+    }
+}
+
+function set_message($type = "message", $content = "") {
+    switch ($type) {
+        case "message":
+            $_SESSION['message'] = $content;
+        break;
+        case "error":
+            $_SESSION['error'] = $content;
+        break;
+        default:
+            $_SESSION['message'] = $content;
     }
 }

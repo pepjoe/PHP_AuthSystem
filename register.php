@@ -1,9 +1,14 @@
 <?php include_once('lib/header.php');
 require_once('functions/alert.php');
+require_once('functions/redirect.php');
  
 if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
     // redirect to dashboard
-    header("Location: dashboard.php");
+    if ($_SESSION['role'] == "Coaching Team") {
+        redirect_to('coachingT_dashboard.php');
+    }else{
+        redirect_to('player_dashboard.php');
+    }
 }
 
 ?>
@@ -95,14 +100,6 @@ if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
                 <label>Designation</label><br />
                 <select class="form-control" name="designation" >
                 
-                    
-                    <option 
-                    <?php              
-                        if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Director'){
-                            echo "selected";                                                           
-                        }                
-                    ?>
-                    >Director</option>
                     <option 
                     <?php              
                         if(isset($_SESSION['designation']) && $_SESSION['designation'] == 'Coaching Team'){
@@ -122,14 +119,50 @@ if(isset($_SESSION['loggedIn']) && !empty($_SESSION['loggedIn'])){
 
             </p>
             <p>
-                <label class="label" for="department">Department</label><br />
-                <input
-                <?php              
-                    if(isset($_SESSION['department'])){
-                        echo "value=" . $_SESSION['department'];                                                             
-                    }                
-                ?>
-                type="text" id="department" class="form-control" name="department" placeholder="Department"/>
+                <label class="label" for="department">Department</label><br/>
+                <select class="form-control" name="department">
+                
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Club Service'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Club Service</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Techniques and Coaching'){
+                        echo "selected";                                                           
+                    }
+                    ?>
+                    >Techniques and Coaching</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Sales'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Sales</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Administration'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Administration</option>
+                    
+                    <option
+                    <?php
+                    if(isset($_SESSION['department']) && $_SESSION['department'] == 'Finance'){
+                        echo "selected";
+                    }
+                    ?>
+                    >Finance</option>
+                    
+                </select>
             
             </p>
             <p>
