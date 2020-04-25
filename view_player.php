@@ -16,7 +16,7 @@ if(!isset($_SESSION['loggedIn'])){
 <div class="container">
     <div class="row">
 		<div class="col-md-12 pt-3">
-        <a class="btn btn-outline-danger" href="admindashboard.php" style="margin: 20px"> < Back</a>
+        <a class="btn btn-outline-danger" href="admin_dashboard.php" style="margin: 20px"> < Back</a>
         <h4 class="display-5 text-center">   All Players</h4>
         <div id="table">
         <?php
