@@ -21,6 +21,7 @@ function appointment ($department){
                 <td>$appointment->time</td>
                 <td>$appointment->department</td>
                 <td>$appointment->complaint</td>
+                <td>$appointment->bill</td>
             </tr>
             ";
         }
@@ -82,4 +83,66 @@ function getAllplayers() {
         } 
     }
     return $playerRow;
+}
+
+function payment ($email){
+    $rows = '';
+    $rowNumber = 0;
+    $allpayments = scandir("file_system/payments/");
+    $countpayments = count($allpayments);
+
+for ($counter = 2; $counter < $countbills ; $counter++) {
+     $payment = json_decode(file_get_contents('file_system/payments/' . $allpayments[$counter]));
+ 
+ 
+    if ($payment->email == $email) {
+        $rowNumber++;
+        $rows .= "
+         <tr>
+            <th scope='row'>$rowNumber</th>
+            <td>$payment->date</td>
+            <td>$payment->time</td>
+            <td>$payment->amount</td>
+            <td>$payment->txref</td>
+            <td>$payment->email</td>
+            <td>$payment->fullname</td>
+        </tr>
+        ";
+    }
+}
+
+if ($rows == '') {
+    return false;
+}
+return $rows;
+}
+
+//fetch all payments
+function getAllpayment()
+{
+
+    $txtRow = '';
+    $txtrowNumber = 0;
+    $alltx = scandir('file_system/payments/');
+    $num = count($alltx);
+    for ($counter = 2; $counter < $num; $counter++) {
+        
+        $tx = json_decode(file_get_contents('file_system/payments/' . $alltx[$counter]));
+        
+        
+            $txtrowNumber++;
+            $txtRow .= "
+            <tr>
+            <th scope='row'>$txtrowNumber</th>
+            <td>$tx->date</td>
+            <td>$tx->time</td>
+            <td>$tx->amount</td>
+            <td>$tx->txref</td>
+            <td>$tx->email</td>
+            <td>$tx->fullname</td>
+        </tr>
+            ";
+        
+    }
+    return $txtRow;
 }
