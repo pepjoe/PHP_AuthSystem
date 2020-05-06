@@ -91,7 +91,7 @@ function payment ($email){
     $allpayments = scandir("file_system/payments/");
     $countpayments = count($allpayments);
 
-for ($counter = 2; $counter < $countbills ; $counter++) {
+for ($counter = 2; $counter < $countpayments ; $counter++) {
      $payment = json_decode(file_get_contents('file_system/payments/' . $allpayments[$counter]));
  
  
