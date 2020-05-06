@@ -38,7 +38,7 @@ if(isset($_GET['txref'])){
     $currentUser = $email . ".json";
     $userString = file_get_contents("file_system/appointments/".$currentUser);
     $userObject = json_decode($userString);
-    $userObject->payment = "Paid";
+    $userObject->bill = "Paid";
     unlink("file_system/appointments/".$currentUser);
     file_put_contents("file_system/appointments/". $email . ".json", json_encode($userObject));
     
