@@ -39,6 +39,7 @@ $userObject = json_decode($_SESSION['userObject']);
             <th scope="col">Appointment Time</th>
             <th scope="col">Department</th>
             <th scope="col">Initial Complaint</th>
+            <th scope="col">Payment Status</th>
         </tr>
         </thead>
         

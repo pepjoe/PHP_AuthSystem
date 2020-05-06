@@ -43,7 +43,7 @@ function hide() {
 
         <div class="col-md-6 pt-5 pl-4 mx-auto text-center">
         <p>
-            <a href="#" class="btn btn-bg btn-primary"> Pay Bill</a>
+            <a href="https://flutterwave.com/pay/pepjoeatbi" class="btn btn-bg btn-primary"> Pay Bill</a>
         </p>
         
         <p>

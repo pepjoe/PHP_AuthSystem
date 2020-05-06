@@ -66,6 +66,34 @@ function find_user($email = ""){
     return false;
 }
 
+function send_payment_mail(
+    $subject = "", 
+    $message = "",
+    $email = ""
+    ){
+    
+    $headers = "From: no-reply@bodilyacademy.com" . "\r\n" .
+    "CC: admin@bodilyacademy.com";
+
+    $try = mail($email,$subject,$message,$headers);
+
+    if($try){
+        
+        set_alert('message',"Payment successful " . $email);        
+        
+
+    }else{
+        
+        set_alert('error',"Something went wrong, we could not send confirmation email: " . $email);             
+
+    }
+
+}
+
+function save_payment($payment){
+    file_put_contents("file_system/payments/". $payment['txref'] . ".json", json_encode($payment));
+}
+
 function save_user($userObject){
     file_put_contents("file_system/users/". $userObject['email'] . ".json", json_encode($userObject));
 }

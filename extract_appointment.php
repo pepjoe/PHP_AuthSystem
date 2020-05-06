@@ -10,6 +10,7 @@ $time = date('h:i', strtotime($_POST['time']));
 $noa = $_POST['noa'];
 $department = $_POST['department'];
 $complaint = $_POST['complaint'];
+$payment = "Not Paid";
 
 $appointment = [
     'date'=>$date,
@@ -18,7 +19,8 @@ $appointment = [
     'department'=>$department,
     'complaint'=>$complaint,
     'email'=>$userData->email,
-    'fullname'=>$userData->first_name . " " . $userData->last_name
+    'fullname'=>$userData->first_name . " " . $userData->last_name,
+    'payment'=>$payment
 ];
 
 //save appointment to database

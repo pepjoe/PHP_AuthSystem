@@ -30,3 +30,17 @@ function find_token($email = ''){
     return false;
     
 }
+
+function generate_txref(){
+    $txref = "txref_"; 
+
+    $alphabets = ['a','b','c','d','e','f','1','2','3','4','5','6'];
+
+    for($i = 0 ; $i < 8 ; $i++){
+
+      $index = mt_rand(0,count($alphabets)-1);
+      $txref .= $alphabets[$index];
+    }
+
+    return $txref;
+}
