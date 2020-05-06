@@ -1,6 +1,6 @@
 # PHP Task 3 - Authentication System Refactor
 
-![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587675955/Screenshot_72_hekvoh.png)
+![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1588722200/Screenshot_78_uoshog.png)
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676147/Screenshot_73_sdw9n3.png)
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587676476/Screenshot_75_pkplko.png)
 ![StartNG](https://res.cloudinary.com/pepjoe/image/upload/v1587728840/Screenshot_76_dpczal.png)
