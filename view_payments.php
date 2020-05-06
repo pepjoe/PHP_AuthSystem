@@ -1,4 +1,4 @@
-<?php include_once('header.php'); 
+<?php include_once('lib/adminheader.php'); 
 require_once('functions/fetch.php');
 require_once('functions/redirect.php');
 
@@ -61,5 +61,5 @@ if(!isset($_SESSION['loggedIn'])){
     
 
 <?php
-include_once('footer.php');
+include_once('lib/footer.php');
 ?>

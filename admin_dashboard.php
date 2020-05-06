@@ -18,10 +18,10 @@ if(!isset($_SESSION['loggedIn'])){
         </p>
 
         <p>
-            <a class="btn btn-bg btn-outline-primary" href="view_player.php">View Players</a>            
+            <a class="btn btn-bg btn-outline-primary" href="view_player.php">View Players</a>  |  <a class="btn btn-bg btn-outline-primary" href="view_staff.php">View Staff</a>        
         </p>
         <p>
-            <a class="btn btn-bg btn-outline-primary" href="view_staff.php">View Staff</a>            
+            <a class="btn btn-bg btn-outline-primary" href="view_payments.php">View all Payments</a>            
         </p>
         
     </div>

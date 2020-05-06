@@ -26,7 +26,7 @@ echo $txref;
 </div>
 
 <script>
-    const API_publicKey = "FLWPUBK-ef4b311230c6d8822c26fc0618d09991-X";
+    const API_publicKey = "FLWPUBK_TEST-4363836c07fc430012c40d46f9f12efb-X";
 
     function payWithRave() {
         var x = getpaidSetup({
@@ -37,7 +37,7 @@ echo $txref;
             currency: "NGN",
             txref: '<?php echo $txref; ?>',
             meta: [{
-                metaname: "bodily",
+                metaname: "DevPepjoe",
                 metavalue: "AP1234"
             }],
             onclose: function() {},
